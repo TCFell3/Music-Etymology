@@ -4,12 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
-<div class="image-container">
+
+<section class="two-columnb">
+  <button id="BackButton"><img src="Red_X.svg.webp" alt="Back Button"></button>
+    <div class="image-container">
     <img src="Bar Line.avif" alt="This is a Bar Line">
-    <div class="overlay-text">Music Etymology</div>
-</div>
+    <div class="overlay-text">Music Etymology</div></div>
+</section>
+
+<section class="one-column">
+    <div class="image">
+        <button id="DynamicsButton"><img src="dynamics.webp" alt="Dynamics"></button>
+    <div>
+        <p>Dynamics change the volume of a piece while playing.</p>
+    </div>    
+    </div>
+
+    <div class="image-containera">
+    <div class="text-box">Music Terminology</div></div>
+
+    <div class="image">
+        <button id="ClefsButton"><img src="clefs.jpg" alt="Clefs"></button>
+        <p>Clefs tell you where on your instrument you play.</p>
+    </div>
+
+        <div class="two-column">
+    <div class="text"id="Text1">Andante</div>
+    <div class="text"id="Text2">Poco</div>
+    <div class="textbody"id="Text3">Andante is the slow tempo. It's used to play graceful and quiet pieces.</div>
+    <div class="textbody"id="Text4">Poco means "little" in Italian and Spanish. It is added before dynamics to make the dynamic smaller and less prominent.</div>
+    <div class="text"id="Text5">Allegro</div>
+    <div class="text"id="Text6">Vivace</div>
+    <div class="textbody"id="Text7">Allegro is the fast tempo, usually used in quick and lively pieces. It makes the piece quicker and more dynamic.</div>
+    <div class="textbody"id="Text8">Vivace is the lively tempo. It's used similarly to Allegro, but is faster and more light, used in Beethoven and Mozart's pieces.</div></div>
+    <div class="image">
+        <button id="NotesButton"><img src="scale.png" alt="Scales"></button>
+    <p>The scale shows you the notes on your instrument.</p></div></div>
+        <div class="two-columna">
+    <div class="text"id="Text9">Moderato</div>
+    <div class="text"id="Text10">Largo</div>
+    <div class="textbody"id="Text11">Moderato is the medium tempo, which is the steady and calm tempo. It's a very controllable tempo.</div>
+    <div class="textbody"id="Text12">Largo is one of the slowest tempos. It's a very broad tempo, used in heavy or dramatic pieces.</div></div>
+
+</section>
+
+<script>
+  const button1 = document.getElementById('DynamicsButton');
+  const button2 = document.getElementById('ClefsButton');
+  const button3 = document.getElementById('NotesButton');
+  const button4 = document.getElementById('BackButton');
+  const dtextElement1 = document.getElementById('Text1');
+  const dtextElement2 = document.getElementById('Text2');
+  const dtextElement3 = document.getElementById('Text3');
+  const dtextElement4 = document.getElementById('Text4');
+  const dtextElement5 = document.getElementById('Text5');
+  const dtextElement6 = document.getElementById('Text6');
+  const dtextElement7 = document.getElementById('Text7');
+  const dtextElement8 = document.getElementById('Text8');
+  const dtextElement9 = document.getElementById('Text9');
+  const dtextElement10 = document.getElementById('Text10');
+  const dtextElement11 = document.getElementById('Text11');
+  const dtextElement12 = document.getElementById('Text12');
+
+  button1.addEventListener('click', () => {
+    dtextElement1.textContent = 'pp';
+    button1.style = "border: 5px solid #555555;"
+    button2.style = "border: 5px solid #8D8D8D;"
+    button3.style = "border: 5px solid #8D8D8D;"
+    button4.style = "border: 5px solid #8D8D8D;"
+    dtextElement2.textContent = 'p';
+    dtextElement3.textContent = "This is one of the quietest dynamics. It's used in slow and expressive pieces. ";
+    dtextElement4.textContent = "One of the quieter dynamics, it's used in slow pieces. When playing in this dynamic, you should be calm and expressive.";
+    dtextElement5.textContent = 'mp';
+    dtextElement6.textContent = 'mf';
+    dtextElement7.textContent = 'mp is a quiet dynamic, used for slower pieces and breaks in the music.';
+    dtextElement8.textContent = 'A slightly loud dynamic for moderate pieces, which is used in lighter music.';
+    dtextElement9.textContent = 'f';
+    dtextElement9.style = 'visibility: show;';
+    dtextElement10.textContent = 'ff';
+    dtextElement10.style = 'visibility: show;';
+    dtextElement11.textContent = 'This is the louder dynamic, used in pieces that are faster, dramatic and stronger.';
+    dtextElement11.style = 'visibility: show;';
+    dtextElement12.textContent = 'The loud dynamic, when you need emphasis and power in your music.';
+    dtextElement12.style = 'visibility: show;';
+  });
+
+  button2.addEventListener('click', () => {
+    button1.style = "border: 5px solid #8D8D8D;"
+    button2.style = "border: 5px solid #555555;"
+    button3.style = "border: 5px solid #8D8D8D;"
+    button4.style = "border: 5px solid #8D8D8D;"
+    dtextElement1.textContent = 'Treble';
+    dtextElement2.textContent = 'Bass';
+    dtextElement3.textContent = 'The treble clef, which shows the notes Middle C and upwards. Primarily plays the melody.';
+    dtextElement4.textContent = 'The bass clef, showing the Middle C and under. Plays chords and occasionally the melody.';
+    dtextElement5.textContent = 'Alto';
+    dtextElement6.textContent = 'Tenor';
+    dtextElement7.textContent = 'A clef where Middle C is in the middle of the stave, virtually only used by the violas.';
+    dtextElement8.textContent = 'This clef has Middle C on the fourth line counting up, and is used by lower instruments like the cello and the bassoon.';
+    dtextElement9.style = 'visibility: hidden;';
+    dtextElement10.style = 'visibility: hidden;';
+    dtextElement11.style = 'visibility: hidden;';
+    dtextElement12.style = 'visibility: hidden;';
+  });
+
+  button3.addEventListener('click', () => {
+    button1.style = "border: 5px solid #8D8D8D;"
+    button2.style = "border: 5px solid #8D8D8D;"
+    button3.style = "border: 5px solid #555555;"
+    button4.style = "border: 5px solid #8D8D8D;"
+    dtextElement1.textContent = 'Major';
+    dtextElement2.textContent = 'Minor';
+    dtextElement3.textContent = 'Major is the positive key, used in bright and fast pieces.';
+    dtextElement4.textContent = 'The minor key is used in sad pieces. It can also be used in a dramatic way when coupled with loud dynamics.';
+    dtextElement5.textContent = 'Crotchet';
+    dtextElement6.textContent = 'Quaver';
+    dtextElement7.textContent = 'A crotchet, also known as a quarter note, is usually one beat. It has a fully coloured circle with a line.';
+    dtextElement8.textContent = 'A quaver, called an eighth note, is half of a beat. It has a fully coloured circle with a line and a flick.';
+    dtextElement9.textContent = 'Minim';
+    dtextElement9.style = 'visibility: show;';
+    dtextElement10.textContent = 'Semibreve';
+    dtextElement10.style = 'visibility: show;';
+    dtextElement11.textContent = 'Also known as a half note, the minim is two beats. It looks like the crotchet, but the circle is unfilled.';
+    dtextElement11.style = 'visibility: show;';
+    dtextElement12.textContent = 'A semibreve is a full note, and lasts 4 beats, which is the full length of a 4/4 bar. It is a unfilled circle with no line.';
+    dtextElement12.style = 'visibility: show;';
+  });
+
+button4.addEventListener('click', () => {
+    button1.style = "border: 5px solid #8D8D8D;"
+    button2.style = "border: 5px solid #8D8D8D;"
+    button3.style = "border: 5px solid #8D8D8D;"
+    button4.style = "border: 5px solid #8D8D8D;"
+    dtextElement1.textContent = 'Andante';
+    dtextElement2.textContent = 'Poco';
+    dtextElement3.textContent = "Andante is the slow tempo. It's used to play graceful and quiet pieces.";
+    dtextElement4.textContent = 'Poco means "little" in Italian and Spanish. It is added before dynamics to make the dynamic smaller and less prominent.';
+    dtextElement5.textContent = 'Allegro';
+    dtextElement6.textContent = 'Vivace';
+    dtextElement7.textContent = "Allegro is the fast tempo, usually used in quick and lively pieces. It makes the piece quicker and more dynamic.";
+    dtextElement8.textContent = "Vivace is the lively tempo. It's used similarly to Allegro, but is faster and more light, used in Beethoven and Mozart's pieces.";
+    dtextElement9.textContent = 'Moderato';
+    dtextElement9.style = 'visibility: show;';
+    dtextElement10.textContent = 'Largo';
+    dtextElement10.style = 'visibility: show;';
+    dtextElement11.textContent = "Moderato is the medium tempo, which is the steady and calm tempo. It's a very controllable tempo.";
+    dtextElement11.style = 'visibility: show;';
+    dtextElement12.textContent = "Largo is one of the slowest tempos. It's a very broad tempo, used in heavy or dramatic pieces.";
+    dtextElement12.style = 'visibility: show;';
+  });
+</script>
+
 </body>
 </html>
