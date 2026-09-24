@@ -1,3 +1,5 @@
+
+<!-- This adds the CSS function to the site-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-
+<!-- Two Column with the undo button -->
 <section class="two-columnb">
   <button id="BackButton"><img src="Red_X.svg.webp" alt="Back Button"></button>
     <div class="image-container">
@@ -16,6 +18,7 @@
     <div class="overlay-text">Music Etymology</div></div>
 </section>
 
+<!-- Info and images with buttons on the left -->
 <section class="one-column">
     <div class="image">
         <button id="DynamicsButton"><img src="dynamics.webp" alt="Dynamics"></button>
@@ -51,7 +54,7 @@
     <div class="textbody" id="Text12">Largo is one of the slowest tempos. It's a very broad tempo, used in heavy or dramatic pieces.</div></div>
 
 </section>
-
+<!-- Button code that changes text -->
 <script>
   const button1 = document.getElementById('DynamicsButton');
   const button2 = document.getElementById('ClefsButton');
@@ -69,6 +72,7 @@
   const dtextElement10 = document.getElementById('Text10');
   const dtextElement11 = document.getElementById('Text11');
   const dtextElement12 = document.getElementById('Text12');
+
 
   button1.addEventListener('click', () => {
     dtextElement1.textContent = 'pp';
